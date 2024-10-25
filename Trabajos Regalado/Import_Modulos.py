@@ -1,5 +1,5 @@
 from Modulos.Colores import *
-from guarda_pick import guardar, cargar
+from Modulos.guarda_pick import guardar
 
 print("Lista de nombres en colores\nIngresa 'end' para terminar ")
 lista=[]
@@ -14,7 +14,7 @@ while True:
 for el in lista:
     print(el)
 
-guardar(lista,"nombres")
+guardar(lista,"nombres.txt")
 
 
 
