@@ -1,20 +1,25 @@
 Turnos_Libreria={
     "Matutino":{
-        "Matematica":(10),
-        "Fisica":(50),
-        "Quimica":(40)
+        "Matematica":0,
+        "Fisica":0,
+        "Quimica":0
     },
     "Vespertino":{
-        "Matematica":(50),
-        "Fisica":(10),
-        "Quimica":(5)
+        "Matematica":0,
+        "Fisica":0,
+        "Quimica":0
     },
     "Noscturno":{
-        "Matematica":(5),
-        "Fisica":(10),
-        "Quimica":(5)
+        "Matematica":0,
+        "Fisica":0,
+        "Quimica":0
     }
 }
+
+for el in Turnos_Libreria:
+    for i in Turnos_Libreria[el]:
+        Turnos_Libreria[el][i]= int(input(f"Ingresa el numero para {el} de libros de {i}:"))
+    print()
 
 suma_Mat=0; suma_Fis=0; suma_Quim=0
 for el in Turnos_Libreria:
