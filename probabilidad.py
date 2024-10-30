@@ -40,7 +40,7 @@ for materia, cantidad in Turnos_Libreria["Vespertino"].items():
 for materia, cantidad in Turnos_Libreria["Noscturno"].items():
     suma_Noc += cantidad
 
-print((f"{cian("Libros comprados por turno: ")}\nMatutino: {suma_Matu}\nVespertino: {suma_Ves}\nNocturno: {suma_Noc}\n"))
+print(f"{cian("Libros comprados por turno: ")}\nMatutino: {suma_Matu}\nVespertino: {suma_Ves}\nNocturno: {suma_Noc}\n")
 
 #total de libros vendidos
 suma_total=0
