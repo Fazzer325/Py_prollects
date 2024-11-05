@@ -1,4 +1,6 @@
 import pickle
+from webbrowser import Error
+
 
 def guardar(variable,nombre=None):
     try:
@@ -11,7 +13,7 @@ def guardar(variable,nombre=None):
         fichero.close()
         print("Guardado Completado")
     except:
-        print("--!!No se encontro el archibo!!--")
+        print(f"--!!No se encontro el archibo {nombre}!!--")
 
 def cargar(nombre=None):
     try:
@@ -23,4 +25,4 @@ def cargar(nombre=None):
         variable = pickle.load(fichero)
         return variable
     except:
-        print("--!!No se encontro el archibo!!--")
+        print(f"--!!No se encontro el archibo {nombre}!!--")

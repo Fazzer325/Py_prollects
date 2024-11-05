@@ -1,3 +1,5 @@
+
+
 def todos():
     print("\033[30m" + "negro,", "\033[31m" + "rojo,", "\033[92m" + "verde,", "\033[93m" + "amarillo,",
           "\033[34m" + "azul,", "\033[35m" + "magenta,", "\033[36m" + "cyan,", "\033[97m" + "blanco,",
@@ -12,7 +14,6 @@ def negro(texto):
 
 
 # -----------------------------
-
 def rojo(texto):
     pintar = "\033[31m" + texto + "\033[0m"
     return pintar
