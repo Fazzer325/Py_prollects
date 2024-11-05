@@ -13,12 +13,12 @@ def guardar(variable,nombre=None):
     except:
         print("--!!No se encontro el archibo!!--")
 
-def cargar(archivo=None):
+def cargar(nombre=None):
     try:
-        if archivo == None:
+        if nombre == None:
             fichero = open(input("Nombre de el archivo a cargar: "), "rb")
         else:
-            fichero = open(archivo, "rb")
+            fichero = open(nombre, "rb")
 
         variable = pickle.load(fichero)
         return variable
