@@ -9,9 +9,10 @@ except:
     Boletos=[]
     print("!!-No hay un guardado-!!\n")
 
+opc=0
 numeros=[]
-while True:
-    print("\n1° Mostrar voletos vigentes\n2° Verificar boleto\n3° Imprimir nuevos Boletos\n")
+while opc!=4:
+    print("\n1° Mostrar voletos vigentes\n2° Verificar boleto\n3° Imprimir nuevos Boletos\n4° Salir")
     opc=int(input("Elije una opcion: "))
 
     if opc==1:
