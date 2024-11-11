@@ -1,10 +1,13 @@
 import random
+import datetime
 from Modulos.guarda_pick import cargar, guardar
 from Modulos.Colores import *
+
 
 try:
     Boletos = cargar("Boletos.pkl")
     cantidad_NB = cargar("cantidad_NB.pkl")
+    fecha= cargar("fecha.pkl")
     if Boletos is None:
         print(rojo(f"!!-No se pudo cargar los archivos-!!"))
     else:
@@ -30,6 +33,7 @@ while opc != 4:
             if len(Boletos) > 0:
                 for el, boleto in enumerate(Boletos, start=1):
                     print(f"{el}° Boleto: {list(boleto)}")
+                print(f"Boletos creados el {fecha.date()}\n")
             else:
                 print("No hay boletos guardados.")
         except:
@@ -55,9 +59,10 @@ while opc != 4:
         numeros = []
         cantidad_Num = int(input("¿Cuántos números se podrán usar?: "))
 
-        for el in range(cantidad_Num):
-            numero = int(input(f"Ingresa el {el + 1}° Número: "))
-            numeros.append(numero)
+
+        numero = int(input(f"Ingresa los Números: "))
+        for i in str(numero):
+            numeros.append(int(i))
 
         cantidad_B = int(input("\n¿Cuántos boletos necesitas?: "))
         cantidad_NB = int(input("\n¿Cuántos números tendrá el boleto?: "))
@@ -87,13 +92,17 @@ while opc != 4:
                 Boletos.add(nums_B_tuple)
 
             Boletos = list(Boletos)
+            fecha=datetime.datetime.now()
             guardar(Boletos, "Boletos.pkl")
             guardar(cantidad_NB, "cantidad_NB.pkl")
+            guardar(fecha, "fecha.pkl")
 
             if veri ==False:
                 print(f"{len(Boletos)} boletos han sido generados y guardados.")
             else:
                 print("No se generaron boletos válidos.")
+    elif opc ==4:
+        None
     else:
         print(rojo("\n!!-Opción no válida-!!"))
 
